@@ -1,0 +1,618 @@
+/* HEADER */
+
+* {
+    text-align: center;
+}
+
+.header {
+    position: absolute;
+    background: url('./enset.jpeg') no-repeat;
+    background-position: 50% 30%;
+    background-size: cover;
+    /* filter: blur(50px); */
+    filter: brightness(70%) blur(2px);
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    top: 0;
+    right: 0;
+}
+
+img {
+    width: 100%;
+}
+
+.picture {
+    position: absolute;
+    width: 180px;
+    left: 100px;
+    top: 70px;
+}
+
+.navbar {
+    position: absolute;
+    right: 40px;
+    top: 70px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+}
+
+li a {
+    float: left;
+    text-decoration: none;
+    color: #ffffff;
+    font: 17px 'Rubik', sans-serif;
+    text-align: center;
+    padding: 6px 0;
+    margin: 14px 25px;
+    /* transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); */
+    position: relative;
+}
+
+li a:hover {
+    color: #ffffff;
+}
+
+
+/* FADE ANIMATION*/
+
+
+/* Fade in */
+
+li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: #ffffff;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+
+
+/* Slide in */
+
+li a {
+    overflow: hidden;
+}
+
+li a::after {
+    opacity: 1;
+    transform: translate3d(-100%, 0, 0);
+}
+
+li a:hover::after,
+li a:focus::after {
+    transform: translate3d(0, 0, 0);
+}
+
+
+/* .END */
+
+.home {
+    position: relative;
+    top: 4px;
+}
+
+.home:hover {
+    opacity: 1;
+}
+
+.socialmedia {
+    position: absolute;
+    width: 160px;
+    display: flex;
+    right: 40px;
+    top: 140px;
+    cursor: pointer;
+}
+
+.imgflex {
+    padding-right: 14px;
+}
+
+.socialmedia img:hover {
+    opacity: 1;
+}
+
+
+/* .enentete {
+    background-color: #004c83e3;
+    width: 570px;
+    height: 37px;
+    right: 60px;
+    position: absolute;
+    top: 0;
+    border-radius: 0px 0px 10px 10px;
+} */
+
+.entete {
+    width: 47%;
+    height: 35px;
+    position: absolute;
+    right: 60px;
+    top: 0;
+}
+
+.entete .surch input {
+    position: absolute;
+    left: 480px;
+    top: 6px;
+    font-style: italic;
+    color: #ffffff;
+    outline: none;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    height: 24px;
+    text-align: left;
+    background: none;
+}
+
+.entete .surch img {
+    width: 12px;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+}
+
+.entete .connection {
+    position: absolute;
+    right: 180px;
+    top: 4px;
+    width: 180px;
+    height: 30px;
+}
+
+.entete .connection a {
+    color: #ffffff;
+    font-family: monospace;
+    text-decoration: none;
+    vertical-align: -0.4em;
+    font-weight: bolder;
+}
+
+.entete .connection img {
+    position: absolute;
+    width: 14px;
+    left: 60px;
+    top: 7px;
+}
+
+.langu {
+    position: absolute;
+    display: flex;
+    left: 400px;
+    top: 12px;
+    cursor: pointer;
+}
+
+.langu a {
+    color: rgb(255, 255, 255);
+    padding-left: 4px;
+    font-family: monospace;
+    font-weight: bolder;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.entete .ent {
+    position: absolute;
+    right: 320px;
+    top: 4px;
+    width: 180px;
+    height: 30px;
+}
+
+.entete .ent a {
+    color: #ffffff;
+    font-family: monospace;
+    text-decoration: none;
+    vertical-align: -0.4em;
+    font-weight: bolder;
+}
+
+.entete .ent img {
+    position: absolute;
+    width: 16px;
+    left: -14px;
+    top: 6px;
+}
+
+
+/* MAIN */
+
+.larrow {
+    width: 18px;
+    position: absolute;
+    top: 480px;
+    left: 50px;
+}
+
+.rarrow {
+    width: 18px;
+    position: absolute;
+    top: 480px;
+    right: 50px;
+}
+
+.alalune {
+    position: absolute;
+    width: 630px;
+    top: 304px;
+    left: 120px;
+}
+
+.une {
+    width: 450px;
+    height: 360px;
+    position: absolute;
+    /* background-color: #003066; */
+    top: 284px;
+    right: 120px;
+}
+
+.une p {
+    color: #1b1b1b;
+}
+
+.lune {
+    text-align: left;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border-left: 2px solid gray;
+    padding-left: 8px;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.une .titl {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: left;
+    position: relative;
+    top: -10px;
+}
+
+.une .soust {
+    text-align: left;
+    font: 14px 'Source Sans Pro', sans-serif;
+    color: #4d4d4d;
+    position: relative;
+    top: -34px;
+}
+
+.une .discr {
+    text-align: left;
+    font: 14px 'Source Sans 3', sans-serif;
+    color: #4d4d4d;
+    position: relative;
+    top: -30px;
+}
+
+
+/* button */
+
+.learn-more {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: 11px;
+    font-family: 'Source Sans Pro';
+    left: -152px;
+    top: -30px;
+}
+
+button.learn-more {
+    width: 9rem;
+    height: auto;
+}
+
+button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #282936;
+    border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.425rem;
+    width: 0.652rem;
+    height: 0.092rem;
+    background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.2rem;
+    right: 0.0625rem;
+    width: 0.3rem;
+    height: 0.3rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 -0.3rem;
+    color: #282936;
+    font-weight: 500;
+    line-height: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+button:hover .circle {
+    width: 78%;
+}
+
+button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(0.7rem, 0);
+}
+
+button:hover .button-text {
+    color: #fff;
+}
+
+
+/*fin button*/
+
+.jsanim {
+    width: 100px;
+    cursor: pointer;
+}
+
+
+/* actualite */
+
+.actualite {
+    position: absolute;
+    top: 740px;
+    left: 80px;
+}
+
+.tut {
+    text-align: left;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border-left: 3px solid gray;
+    padding-left: 8px;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+
+/* Grid items*/
+
+.grid {
+    position: relative;
+    left: 20px;
+    top: 40px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 330px;
+}
+
+.grid .item .fromage {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.6s;
+}
+
+.fromage:hover {
+    transform: scale(1.1);
+}
+
+.grid .item .card {
+    position: relative;
+    background-color: #ffffff;
+    width: 300px;
+    height: 300px;
+    top: -270px;
+    left: 230px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    cursor: pointer;
+}
+
+.card .tit {
+    position: relative;
+    text-align: left;
+    font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #1b1b1b;
+}
+
+.card .mayne {
+    font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: justify;
+    color: #4d4d4d;
+    padding-top: 14px;
+}
+
+.card .datee {
+    font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: justify;
+    color: #4d4d4d;
+    padding-top: 14px;
+}
+
+
+/* MORE*/
+
+.more {
+    position: absolute;
+    top: 758px;
+    right: 40px;
+    /* font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    color: #4d4d4d;
+}
+
+.cta {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.cta span {
+    padding-bottom: 7px;
+    letter-spacing: 3px;
+    font-size: 12px;
+    padding-right: 15px;
+    text-transform: uppercase;
+}
+
+.cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active svg {
+    transform: scale(0.9);
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+/*MORE FIN*/
+
+
+/* FOOTER */
+
+footer {
+    position: absolute;
+    /* background-color: #004c83; */
+    background-color: #1b1b1b;
+    bottom: -760px;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    color: white;
+    font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.lfooter {
+    position: relative;
+    width: 180px;
+    top: 60px;
+    left: 70px;
+}
+
+.adrr {
+    position: absolute;
+    left: 400px;
+    top: 48px;
+}
+
+.adrr p {
+    text-align: left;
+    font-weight: bold;
+}
+
+.tel {
+    position: relative;
+    left: 430px;
+    top: -68px;
+}
+
+
+/*Butt contact*/
+
+.mngalbe {
+    position: absolute;
+    right: 40px;
+    top: 48px;
+}
+
+button.ntaalm {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #ffffff;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #ffffff;
+}
+
+button.ntaalm:hover {
+    color: #1b1b1b;
+    box-shadow: inset 0 -100px 0 0 #ffffff;
+}
+
+button.ntaalm:active {
+    transform: scale(0.9);
+}
+
+
+/**/
